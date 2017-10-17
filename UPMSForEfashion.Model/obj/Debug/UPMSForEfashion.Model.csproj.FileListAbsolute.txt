@@ -1,0 +1,13 @@
+E:\Work\Demo\UPMSForEfashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.dll.config
+E:\Work\Demo\UPMSForEfashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.dll
+E:\Work\Demo\UPMSForEfashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.pdb
+E:\Work\Demo\UPMSForEfashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\EntityFramework.DLL
+E:\Work\Demo\UPMSForEfashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.dll
+E:\Work\Demo\UPMSForEfashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.pdb
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.dll.config
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.pdb
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\bin\Debug\EntityFramework.DLL
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.csprojResolveAssemblyReference.cache
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.pdb
