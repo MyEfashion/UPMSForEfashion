@@ -11,7 +11,7 @@ namespace UPMSForEfashion.Admin.Areas.Admin.Controllers
     public class ProjectController : Controller
     {
         // GET: Admin/Project
-        public ActionResult Index(int PageIndex,int PageSize)
+        public ActionResult Index(int PageIndex = 1, int PageSize = 0)
         {
             var model = Bll.UserBll.Instance.UserList();
             var result = new ListResult<user>(model, PageIndex, PageSize, model.Count());

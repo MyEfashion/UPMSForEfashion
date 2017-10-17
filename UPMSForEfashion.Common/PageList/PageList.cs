@@ -74,7 +74,7 @@ namespace UPMSForEfashion.Common
         public const string NextLink = @"<li><a href='{0}' aria-label='First' ><span aria-hidden='true'>&raquo;</span></a></li>";
         public const string LastLink = @"<li><a href='{0}' aria-label='Previous' ><span aria-hidden='true'>&raquo;&raquo;</span></a></li>";
         public const string Link = @"<li {1}><a href='{0}'>{2}</a></li>";
-        public const int LinkCount = 5;
+        public const int LinkCount = 10;
         public const string JointHref = "?PageIndex={0}&PageSize={1}";
 
         public string GetFirstLink()
@@ -107,6 +107,7 @@ namespace UPMSForEfashion.Common
             PageIndex = pageIndex;
             PageSize = pageSize;
             TotalItemCount = totalCount;
+            _pageCount = 0;
             Href = url;
             var pageHtml = "";
             if (!IsFirstPage)
@@ -118,15 +119,20 @@ namespace UPMSForEfashion.Common
                 pageHtml += GetPrevLink();
             }
             var result = (pageIndex / LinkCount) * LinkCount;
-            var showMaxPageCount = result + LinkCount;
-            var showMinPageCount = result + 1;
-            if (result != 0 && pageIndex % LinkCount == 0)
+            var showMaxPageCount = pageIndex + LinkCount / 2 - 1;
+            var showMinPageCount = pageIndex - LinkCount / 2;
+            if (showMinPageCount <= 0)
             {
-                showMinPageCount = result;
-                showMaxPageCount = showMaxPageCount - 1;
+                showMinPageCount = 1;
+                showMaxPageCount = LinkCount;
             }
             if (showMaxPageCount >= PageCount)
             {
+                showMinPageCount = PageCount - 10 + 1;
+                if (showMinPageCount <= 0)
+                {
+                    showMinPageCount = 1;
+                }
                 for (int i = showMinPageCount; i <= PageCount; i++)
                 {
                     pageHtml += GetLink(i);
