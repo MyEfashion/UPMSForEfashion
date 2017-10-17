@@ -17,5 +17,10 @@ namespace UPMSForEfashion.Admin.Areas.Admin.Controllers
             var result = new ListResult<user>(model, PageIndex, PageSize, model.Count());
             return View(result);
         }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }
