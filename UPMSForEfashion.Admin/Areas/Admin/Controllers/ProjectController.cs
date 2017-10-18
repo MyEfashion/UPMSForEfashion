@@ -18,6 +18,12 @@ namespace UPMSForEfashion.Admin.Areas.Admin.Controllers
             return View(result);
         }
 
+        public ActionResult Create()
+        {
+            ViewBag.Title = "系统创建";
+            return View(new project());
+        }
+
         public ActionResult Edit()
         {
             return View();

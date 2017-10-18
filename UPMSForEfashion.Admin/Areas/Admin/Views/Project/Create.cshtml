@@ -1,0 +1,62 @@
+﻿@model UPMSForEfashion.Model.project
+@{
+    ViewBag.Title = ViewBag.Title;
+    Layout = "~/Views/Shared/_LayoutForMain.cshtml";
+}
+<style>
+    .form-horizontal .form-group{
+        padding-left:0px;
+        padding-right:0px;
+    }
+</style>
+
+<div class="panel-heading" style="margin-bottom:15px;">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Create</a></li>
+        <li class="active">Data</li>
+    </ol>
+</div>
+<div class="form-horizontal">
+    <form>
+        <input type="hidden" id="ID" name="ID" value="@Model.ID" />
+        <input type="hidden" id="Code" name="Code" value="@Model.Code" />
+        <input type="hidden" id="IsDeleted" name="IsDeleted" value="@Model.IsDeleted" />
+        <input type="hidden" id="CreateTime" name="CreateTime" value="@Model.CreateTime" />
+        <div class="form-group">
+            <label for="Name" class="control-label col-md-2">名称</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="名称" value="@Model.Name">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Url" class="control-label col-md-2">域名</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Url" id="Url" placeholder="域名" value="@Model.Url">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Sort" class="control-label col-md-2">排序</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Sort" id="Sort" placeholder="名称" value="@Model.Sort">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Comment" class="control-label col-md-2">备注</label>
+            <div class="col-md-6">
+                <textarea class="form-control" name="Comment" id="Comment" placeholder="名称">@Model.Comment</textarea>
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8" style="text-align:right;">
+                <button type="button" class="btn btn-lg btn-success">提交</button>
+            </div>
+        </div>
+
+    </form>
+</div>
