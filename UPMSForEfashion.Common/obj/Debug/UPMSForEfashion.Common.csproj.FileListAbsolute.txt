@@ -56,4 +56,3 @@ G:\Efashion\UPMSForEfashion\UPMSForEfashion.Common\bin\Debug\zh-Hans\System.Web.
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Common\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Common\obj\Debug\UPMSForEfashion.Common.dll
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Common\obj\Debug\UPMSForEfashion.Common.pdb
-G:\Efashion\UPMSForEfashion\UPMSForEfashion.Common\obj\Debug\UPMSForEfashion.Common.csprojResolveAssemblyReference.cache

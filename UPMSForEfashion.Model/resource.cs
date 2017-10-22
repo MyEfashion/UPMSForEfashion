@@ -23,5 +23,6 @@ namespace UPMSForEfashion.Model
         public System.DateTime CreateTime { get; set; }
         public System.DateTime UpdateTime { get; set; }
         public string Comment { get; set; }
+        public string ProjectCode { get; set; }
     }
 }

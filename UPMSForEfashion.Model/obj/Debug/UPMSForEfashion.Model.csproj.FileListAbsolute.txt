@@ -22,6 +22,3 @@ G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\zh-Hans\EntityFramew
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.dll
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.pdb
-G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.csprojResolveAssemblyReference.cache
-G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\MySql.Data.dll
-G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\MySql.Data.Entity.EF6.dll
