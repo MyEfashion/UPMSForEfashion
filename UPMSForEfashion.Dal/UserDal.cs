@@ -10,7 +10,7 @@ namespace UPMSForEfashion.Dal
     public class UserDal : DbContextDal
     {
         public readonly static UserDal Instance = new UserDal();
-        public List<user> UserList()
+        public List<user> List()
         {
             return entity.user.ToList();
         }

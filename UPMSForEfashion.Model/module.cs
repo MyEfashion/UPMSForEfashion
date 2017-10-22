@@ -19,6 +19,7 @@ namespace UPMSForEfashion.Model
         public string ModuleCode { get; set; }
         public string ProjectCode { get; set; }
         public int ParentId { get; set; }
+        public bool IsGroup { get; set; }
         public int Level { get; set; }
         public int Sort { get; set; }
         public bool IsDeleted { get; set; }

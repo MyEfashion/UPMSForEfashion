@@ -11,3 +11,15 @@ E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\bin\Debug\EntityFramewor
 E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.csprojResolveAssemblyReference.cache
 E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.dll
 E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.pdb
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.dll.config
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.dll
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\UPMSForEfashion.Model.pdb
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\EntityFramework.dll
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\EntityFramework.SqlServer.dll
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\EntityFramework.xml
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\EntityFramework.SqlServer.xml
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.dll
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.pdb
+G:\Efashion\UPMSForEfashion\UPMSForEfashion.Model\obj\Debug\UPMSForEfashion.Model.csprojResolveAssemblyReference.cache

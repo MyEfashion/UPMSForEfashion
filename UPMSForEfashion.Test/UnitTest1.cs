@@ -65,7 +65,7 @@ namespace UPMSForEfashion.Test
             //
             // TODO:  在此处添加测试逻辑
             //
-            var a = UserDal.Instance.Test();
+            var a = UserDal.Instance.List();
         }
     }
 }

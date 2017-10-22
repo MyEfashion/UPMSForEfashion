@@ -110,6 +110,10 @@ namespace UPMSForEfashion.Common
             _pageCount = 0;
             Href = url;
             var pageHtml = "";
+            if (TotalItemCount == 0)
+            {
+                return new MvcHtmlString(pageHtml);
+            }
             if (!IsFirstPage)
             {
                 pageHtml += GetFirstLink();

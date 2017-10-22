@@ -1,6 +1,6 @@
 ﻿@using UPMSForEfashion.Common;
 @using UPMSForEfashion.Model
-@model UPMSForEfashion.Common.ListResult<user>
+@model UPMSForEfashion.Common.ListResult<project>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutForMain.cshtml";
@@ -14,12 +14,14 @@
     </ol>
 </div>
 <div class="panel-body">
+    <input class="btn btn-default btn-success" type="submit" value="Create" onclick="return Create('@Url.Action("Create")');" style="margin-bottom:5px;">
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <td>ID</td>
-                <td>Name</td>
-
+                <td>编码</td>
+                <td>名称</td>
+                <td>域名</td>
+                <td>操作</td>
             </tr>
         </thead>
         <tbody>
@@ -29,8 +31,10 @@
                     foreach (var item in Model.Rows)
                     {
                         <tr>
-                            <td>@item.ID</td>
-                            <td>@item.RealName</td>
+                            <td>@item.Code</td>
+                            <td>@item.Name</td>
+                            <td>@item.Url</td>
+                            <td><a class="btn btn-sm btn-success" value="Create" onclick="return Create('@Url.Action("Edit", new { id = item.ID })');">编辑</a></td>
                         </tr>
                     }
                 }
@@ -39,11 +43,33 @@
     </table>
     <nav aria-label="Page navigation">
         <ul class="pagination">
-             @PageList.Instance.GetPage(Model.PageIndex, Model.PageSize, 100, Url.Action("Index"))
+            @PageList.Instance.GetPage(Model.PageIndex, Model.PageSize, Model.TotalItemCount, Url.Action("Index"))
         </ul>
         <div class="pagination" style="text-align:center;margin-left:1rem;">
             <span style="float:left;font-size:16px;">共有 @Model.PageCount 页，@Model.TotalItemCount 条数据</span>
         </div>
-        
+
     </nav>
 </div>
+<script>
+    function Create(url) {
+        var layer = layui.layer;
+        var url = url;
+        layer.style(1, {
+            width: '1000px',
+            top: '10px'
+        });
+        layer.open({
+            title: '内容',
+            type: 2,
+            shade: [0.6, '#393D49'],
+            area: ['660px', '600px'],
+            maxmin: true,
+            content: url,
+            zIndex: layer.zIndex, //重点1
+            success: function (layero) {
+                layer.setTop(layero); //重点2
+            }
+        });
+    }
+</script>

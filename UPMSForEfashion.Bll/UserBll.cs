@@ -12,9 +12,9 @@ namespace UPMSForEfashion.Bll
     {
         public readonly static UserBll Instance = new UserBll();
 
-        public List<user> UserList()
+        public List<user> List()
         {
-            return UserDal.Instance.UserList();
+            return UserDal.Instance.List();
         }
     }
 }

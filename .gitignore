@@ -1,1 +1,6 @@
 /UPMSForEfashion.Admin/bin/*.dll
+*.dll
+*.config
+*.pdb
+*.cache
+*.txt

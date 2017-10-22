@@ -1,135 +1,87 @@
-﻿@model UPMSForEfashion.Model.user
-
+﻿@model UPMSForEfashion.Model.project
 @{
-    ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_LayoutForMain.cshtml";
+    var title = Model.ID > 0 ? "编辑" : "添加";
+    Layout = "~/Views/Shared/_LayoutForEdit.cshtml";
 }
-
-<h2>Edit</h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ID)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserName,"姓名", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.RealName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.RealName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RealName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserPwd, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.UserPwd, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserPwd, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Sex, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Sex, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Province, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Province, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Province, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.County, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.County, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.IsDeleted, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IsDeleted)
-                    @Html.ValidationMessageFor(model => model.IsDeleted, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CreateTime, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.CreateTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreateTime, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UpdateTime, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.UpdateTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UpdateTime, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserCode, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.UserCode, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserCode, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-6">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<script src="~/Content/layui/layui.all.js"></script>
+<link href="~/Content/layui/css/layui.css" rel="stylesheet" />
+<style>
+    .form-horizontal .form-group {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+</style>
+<div class="panel-heading" style="margin-bottom:15px;">
+    <ol class="breadcrumb">
+        <li class="active" style="font-size:16px;">@title</li>
+    </ol>
 </div>
+<div class="form-horizontal">
+    <form>
+        <input type="hidden" id="ID" name="ID" value="@Model.ID" />
+        <div class="form-group">
+            <label for="Name" class="control-label col-md-2">名称</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="名称" value="@Model.Name">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Code" class="control-label col-md-2">编码</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Code" id="Code" placeholder="编码" value="@Model.Code">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Url" class="control-label col-md-2">域名</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Url" id="Url" placeholder="域名" value="@Model.Url">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Sort" class="control-label col-md-2">排序</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Sort" id="Sort" placeholder="排序" value="@Model.Sort">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Comment" class="control-label col-md-2">备注</label>
+            <div class="col-md-6">
+                <textarea class="form-control" name="Comment" id="Comment" placeholder="备注">@Model.Comment</textarea>
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8" style="text-align:right;">
+                <button type="button" onclick="return Submit();" class="btn btn-lg btn-success">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    function Submit() {
+        var url = '@Url.Action("Submit")';
+        var data = $("form").serialize();
+        $.post(url, data, function (res) {
+            var result = JSON.parse(res);
+            var isRight = result.data;
+            var link = result.url;
+            layer.open({
+                title: '友情提示',
+                content: result.msg,
+                yes: function (index, layero) {
+                    if (isRight && result.isEdit) {
+                        layer.close(index);
+                        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                        parent.layer.close(index); //再执行关闭   
+                    } else {
+                        window.parent.location = link;
+                    }
+                }
+            });
+        });
+    }
+</script>
