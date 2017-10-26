@@ -1,0 +1,72 @@
+﻿@model UPMSForEfashion.Model.module
+@{
+    var title = Model.ID > 0 ? "编辑" : "添加";
+    Layout = "~/Views/Shared/_LayoutForEdit.cshtml";
+}
+<script src="~/Content/layui/layui.all.js"></script>
+<link href="~/Content/layui/css/layui.css" rel="stylesheet" />
+<style>
+    .form-horizontal .form-group {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+</style>
+<div class="panel-heading" style="margin-bottom:15px;">
+    <ol class="breadcrumb">
+        <li class="active" style="font-size:16px;">@title</li>
+    </ol>
+</div>
+<div class="form-horizontal">
+    <form>
+        <input type="hidden" id="ID" name="ID" value="@Model.ID" />
+        <input type="hidden" id="ParentId" name="ParentId" value="@Model.ParentId" />
+        <input type="hidden" id="ProjectCode" name="ProjectCode" value="@Model.ProjectCode" />
+        <div class="form-group">
+            <label for="Name" class="control-label col-md-2">名称</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="名称" value="@Model.Name">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="ModuleCode" class="control-label col-md-2">编码</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="ModuleCode" id="ModuleCode" placeholder="编码" value="@Model.ModuleCode">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Sort" class="control-label col-md-2">排序</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Sort" id="Sort" placeholder="排序" value="@Model.Sort">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8" style="text-align:right;">
+                <button type="button" onclick="return Submit();" class="btn btn-lg btn-success">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    function Submit() {
+        var url = '@Url.Action("Submit")';
+        var data = $("form").serialize();
+        $.post(url, data, function (res) {
+            var result = JSON.parse(res);
+            var isRight = result.data;
+            var link = result.url;
+            layer.open({
+                title: '友情提示',
+                content: result.msg,
+                yes: function (index, layero) {
+                    if (!isRight) {
+                        return;
+                    }
+                    window.parent.location = link;
+                }
+            });
+        });
+    }
+</script>
