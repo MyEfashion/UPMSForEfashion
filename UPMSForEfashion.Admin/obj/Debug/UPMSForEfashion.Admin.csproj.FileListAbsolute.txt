@@ -365,3 +365,11 @@ G:\Efashion\UPMSForEfashion\UPMSForEfashion.Admin\bin\zh-Hans\System.Web.Http.We
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Admin\obj\Debug\UPMSForEfashion.Admin.csprojResolveAssemblyReference.cache
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Admin\obj\Debug\UPMSForEfashion.Admin.dll
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Admin\obj\Debug\UPMSForEfashion.Admin.pdb
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\EntityFramework.SqlServer.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\MySql.Data.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\MySql.Data.Entity.EF6.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\EntityFramework.xml
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\EntityFramework.SqlServer.xml
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\UPMSForEfashion.Dal.dll.config
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\zh-Hans\EntityFramework.resources.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Admin\bin\zh-Hans\EntityFramework.SqlServer.resources.dll

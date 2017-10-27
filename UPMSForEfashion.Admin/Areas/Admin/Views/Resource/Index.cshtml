@@ -1,7 +1,7 @@
 ﻿@using UPMSForEfashion.Common;
 @using UPMSForEfashion.Bll;
 @using UPMSForEfashion.Model
-@model UPMSForEfashion.Common.ListResult<module>
+@model UPMSForEfashion.Common.ListResult<resource>
 @{
     ViewBag.Title = "Index";
     var projectList = ProjectBll.Instance.List();
@@ -48,7 +48,6 @@
             <tr>
                 <td>编码</td>
                 <td>名称</td>
-                <td>是否模块组</td>
                 <td>操作</td>
             </tr>
         </thead>
@@ -59,9 +58,8 @@
                     foreach (var item in Model.Rows)
                     {
                         <tr>
-                            <td>@item.ModuleCode</td>
+                            <td>@item.Code</td>
                             <td>@item.Name</td>
-                            <td>@(item.IsGroup ? "是" : "否")</td>
                             <td><a class="btn btn-sm btn-success" value="Create" onclick="return Create('@Url.Action("Edit", new { id = item.ID })');">编辑</a><a class="btn btn-sm btn-success" value="Create" onclick="return Create('@Url.Action("Create", new { projectCode = item.ProjectCode, parentId = item.ID })');" style="margin-left:5px;">添加下级</a></td>
                         </tr>
                     }

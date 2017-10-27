@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="255" />
     <Property Name="Code" Type="varchar" MaxLength="255" />
     <Property Name="ParentId" Type="int" Nullable="false" />
@@ -24,6 +24,7 @@
     <Property Name="ModuleCode" Type="varchar" MaxLength="255" />
     <Property Name="ProjectCode" Type="varchar" MaxLength="255" />
     <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="IsGroup" Type="bit" Nullable="false" />
     <Property Name="Level" Type="int" Nullable="false" />
     <Property Name="Sort" Type="int" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
@@ -74,6 +75,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="255" />
     <Property Name="Code" Type="varchar" MaxLength="255" />
+    <Property Name="ProjectCode" Type="varchar" MaxLength="255" />
     <Property Name="Url" Type="varchar" MaxLength="255" />
     <Property Name="Sort" Type="int" Nullable="false" />
     <Property Name="Comment" Type="varchar" MaxLength="255" />

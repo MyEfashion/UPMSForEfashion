@@ -4,6 +4,7 @@
     <EntitySetMapping Name="module">
       <EntityTypeMapping TypeName="rightssystemModel.module">
         <MappingFragment StoreEntitySet="module">
+          <ScalarProperty Name="IsGroup" ColumnName="IsGroup" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ModuleCode" ColumnName="ModuleCode" />
@@ -60,6 +61,7 @@
     <EntitySetMapping Name="resource">
       <EntityTypeMapping TypeName="rightssystemModel.resource">
         <MappingFragment StoreEntitySet="resource">
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
           <ScalarProperty Name="Comment" ColumnName="Comment" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />

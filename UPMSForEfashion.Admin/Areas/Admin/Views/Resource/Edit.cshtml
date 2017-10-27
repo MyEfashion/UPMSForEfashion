@@ -1,4 +1,4 @@
-﻿@model UPMSForEfashion.Model.module
+﻿@model UPMSForEfashion.Model.resource
 @{
     var title = Model.ID > 0 ? "编辑" : "添加";
     Layout = "~/Views/Shared/_LayoutForEdit.cshtml";
@@ -19,7 +19,6 @@
 <div class="form-horizontal">
     <form>
         <input type="hidden" id="ID" name="ID" value="@Model.ID" />
-        <input type="hidden" id="ParentId" name="ParentId" value="@Model.ParentId" />
         <input type="hidden" id="ProjectCode" name="ProjectCode" value="@Model.ProjectCode" />
         <div class="form-group">
             <label for="Name" class="control-label col-md-2">名称</label>
@@ -29,9 +28,16 @@
             <p class="help-block"></p>
         </div>
         <div class="form-group">
-            <label for="ModuleCode" class="control-label col-md-2">编码</label>
+            <label for="Code" class="control-label col-md-2">编码</label>
             <div class="col-md-6">
-                <input type="text" class="form-control" name="ModuleCode" id="ModuleCode" placeholder="编码" value="@Model.ModuleCode">
+                <input type="text" class="form-control" name="Code" id="Code" placeholder="编码" value="@Model.Code">
+            </div>
+            <p class="help-block"></p>
+        </div>
+        <div class="form-group">
+            <label for="Url" class="control-label col-md-2">地址</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="Url" id="Url" placeholder="地址" value="@Model.Url">
             </div>
             <p class="help-block"></p>
         </div>

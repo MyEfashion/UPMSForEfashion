@@ -36,3 +36,9 @@ G:\Efashion\UPMSForEfashion\UPMSForEfashion.Bll\bin\Debug\zh-Hans\EntityFramewor
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Bll\obj\Debug\UPMSForEfashion.Bll.csprojResolveAssemblyReference.cache
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Bll\obj\Debug\UPMSForEfashion.Bll.dll
 G:\Efashion\UPMSForEfashion\UPMSForEfashion.Bll\obj\Debug\UPMSForEfashion.Bll.pdb
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Bll\bin\Debug\EntityFramework.SqlServer.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Bll\bin\Debug\UPMSForEfashion.Dal.dll.config
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Bll\bin\Debug\EntityFramework.xml
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Bll\bin\Debug\EntityFramework.SqlServer.xml
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Bll\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Work\Demo\UPMSForEfashion\UPMS\UPMSForEfashion.Bll\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
