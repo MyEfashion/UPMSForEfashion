@@ -1,0 +1,112 @@
+﻿@using UPMSForEfashion.Common;
+@using UPMSForEfashion.Bll;
+@using UPMSForEfashion.Model
+@model UPMSForEfashion.Common.ListResult<module>
+@{
+    ViewBag.Title = "Index";
+    var projectList = ProjectBll.Instance.List();
+    if (projectList == null)
+    {
+        projectList = new List<project>();
+    }
+    var pcode = ViewBag.ProjectCode;
+    Layout = "~/Views/Shared/_LayoutForMain.cshtml";
+}
+
+<div class="panel-heading">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+</div>
+<div class="panel-body">
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-1 control-label">项目</label>
+        <div class="col-sm-5">
+            <select class="form-control" id="projectCode">
+                @{
+                    foreach (var item in projectList)
+                    {
+                        <option value="@item.Code" onclick="return changeUrl();" @(pcode == item.Code ? "selected='selected'" : "")>@item.Name</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+</div>
+<div class="panel-body">
+    @{
+        if (projectList.Count() > 0)
+        {
+            <input class="btn btn-default btn-success" type="submit" value="Create" onclick="return Create('');" style="margin-bottom:5px;clear:both;">
+        }
+    }
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>编码</td>
+                <td>名称</td>
+                <td>是否模块组</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (Model.TotalItemCount > 0)
+                {
+                    foreach (var item in Model.Rows)
+                    {
+                        <tr>
+                            <td>@item.ModuleCode</td>
+                            <td>@item.Name</td>
+                            <td>@(item.IsGroup ? "是" : "否")</td>
+                            <td><a class="btn btn-sm btn-success" value="Create" onclick="return Create('@Url.Action("Edit", new { id = item.ID })');">编辑</a><a class="btn btn-sm btn-success" value="Create" onclick="return Create('@Url.Action("Create", new { projectCode = item.ProjectCode, parentId = item.ID })');" style="margin-left:5px;">添加下级</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @PageList.Instance.GetPage(Model.PageIndex, Model.PageSize, Model.TotalItemCount, Url.Action("Index"))
+        </ul>
+        <div class="pagination" style="text-align:center;margin-left:1rem;">
+            <span style="float:left;font-size:16px;">共有 @Model.PageCount 页，@Model.TotalItemCount 条数据</span>
+        </div>
+
+    </nav>
+</div>
+<script>
+    function Create(url) {
+        var layer = layui.layer;
+        var projectCode = $("#projectCode").val();
+        if (url == '') {
+            url = '@Url.Action("Create")' + "?projectCode=" + projectCode;
+        }
+        layer.style(1, {
+            width: '1000px',
+            top: '10px'
+        });
+        layer.open({
+            title: '内容',
+            type: 2,
+            shade: [0.6, '#393D49'],
+            area: ['660px', '600px'],
+            maxmin: true,
+            content: url,
+            zIndex: layer.zIndex, //重点1
+            success: function (layero) {
+                layer.setTop(layero); //重点2
+            }
+        });
+    }
+
+    function changeUrl() {
+        var projectCode = $("#projectCode").val();
+        var url = '@Url.Action("Index")' + "?projectCode=" + projectCode;
+        window.location.href = url;
+    }
+</script>
